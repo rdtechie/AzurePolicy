@@ -1,0 +1,8 @@
+{
+    "approvedIpsCosmosDb": {
+        "type": "Array",
+        "metadata": {
+            "description": "List of approved external IP addresses"
+        }
+    }
+}
