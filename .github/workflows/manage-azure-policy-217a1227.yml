@@ -1,0 +1,32 @@
+name: manage-azure-policy-217a1227
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+
+## Uncomment the following if you wish to automatically trigger workflow run with every commit
+#
+#  push:
+#    paths:
+#      - 'network/nics/policies/deny-nic-without-accelerated-networking-enabled_89affb8c-4f8b-46e2-a581-bcf5cb93329a/**'
+#      - .github/workflows/manage-azure-policy-217a1227.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_217a1227}}
+        allow-no-subscriptions: true
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          network/nics/policies/deny-nic-without-accelerated-networking-enabled_89affb8c-4f8b-46e2-a581-bcf5cb93329a/**

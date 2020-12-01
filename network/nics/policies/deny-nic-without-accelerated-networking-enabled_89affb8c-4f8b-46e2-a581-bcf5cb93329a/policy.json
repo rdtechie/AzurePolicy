@@ -1,0 +1,37 @@
+{
+ "properties": {
+  "displayName": "deny-nic-without-accelerated-networking-enabled",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "metadata": {
+   "category": "Network",
+   "createdBy": "0dba5f24-212d-4556-8c68-93cdca3cc3e6",
+   "createdOn": "2020-12-01T14:26:20.8339297Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {},
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Network/networkInterfaces"
+     },
+     {
+      "not": {
+       "field": "Microsoft.Network/networkInterfaces/enableAcceleratedNetworking",
+       "equals": "true"
+      }
+     }
+    ]
+   },
+   "then": {
+    "effect": "deny"
+   }
+  }
+ },
+ "id": "/subscriptions/a0580b2f-41ac-4b2a-96b1-9d6b54863dde/providers/Microsoft.Authorization/policyDefinitions/89affb8c-4f8b-46e2-a581-bcf5cb93329a",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "89affb8c-4f8b-46e2-a581-bcf5cb93329a"
+}

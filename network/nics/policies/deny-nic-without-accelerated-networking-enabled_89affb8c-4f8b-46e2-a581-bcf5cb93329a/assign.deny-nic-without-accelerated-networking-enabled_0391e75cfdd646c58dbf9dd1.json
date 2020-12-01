@@ -1,0 +1,25 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "deny-nic-without-accelerated-networking-enabled",
+  "policyDefinitionId": "/subscriptions/a0580b2f-41ac-4b2a-96b1-9d6b54863dde/providers/Microsoft.Authorization/policyDefinitions/89affb8c-4f8b-46e2-a581-bcf5cb93329a",
+  "scope": "/subscriptions/a0580b2f-41ac-4b2a-96b1-9d6b54863dde",
+  "notScopes": [],
+  "parameters": {},
+  "metadata": {
+   "assignedBy": "Richard Diphoorn",
+   "parameterScopes": {},
+   "createdBy": "0dba5f24-212d-4556-8c68-93cdca3cc3e6",
+   "createdOn": "2020-12-01T14:26:48.7314415Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/a0580b2f-41ac-4b2a-96b1-9d6b54863dde/providers/Microsoft.Authorization/policyAssignments/0391e75cfdd646c58dbf9dd1",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "0391e75cfdd646c58dbf9dd1"
+}
